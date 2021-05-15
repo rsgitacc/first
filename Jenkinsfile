@@ -9,8 +9,8 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo 'Executing Gradle...'
-                withGradle() 
-                sh '.gradlew -v'                {}
+                withGradle() {
+                sh '.gradlew -v'               
                  }
         }
         stage('Test') {
