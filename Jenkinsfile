@@ -7,11 +7,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-                echo 'Executing Gradle...'
-                withGradle() {
-                sh '.gradlew -v'               
-                 }
+                echo 'Building..Executing Maven...'
+                git 'https://github.com/rsgitacc/first.git'
+                bat '.\mvnw clean compile'
+                  
         }
         stage('Test') {
             steps {
