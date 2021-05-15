@@ -1,10 +1,7 @@
 //Jenkinsfile (Declarative Pipeline)
 pipeline {
     agent any
-    tools { maven 'Maven'
-        }
-
-    stages {
+        stages {
         stage('Build') {
             steps {
                 echo 'Building..Executing Maven...'
